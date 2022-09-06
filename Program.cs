@@ -84,22 +84,22 @@
 
 // ----Решение через метод
 
-int [] GetBinaryArray (int size)
-{
+// int [] GetBinaryArray (int size)
+// {
 
-int [] array = new int [size];
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = new Random(). Next (0, 2);
-}
-return array;
-}
+// int [] array = new int [size];
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = new Random(). Next (0, 2);
+// }
+// return array;
+// }
 
 
-int sizeArray = Convert.ToInt32(Console.ReadLine());
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
 
-int[] resultArray = GetBinaryArray(sizeArray);
-Console.WriteLine($"результат: [ {String.Join("; ", resultArray)} ]");
+// int[] resultArray = GetBinaryArray(sizeArray);
+// Console.WriteLine($"результат: [ {String.Join("; ", resultArray)} ]");
 
 // Домашнее задание к семинару 4
 
@@ -107,11 +107,60 @@ Console.WriteLine($"результат: [ {String.Join("; ", resultArray)} ]");
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+// Console.Write("Введите число А: ");
+// int A = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число В: ");
+// int B = Convert.ToInt32(Console.ReadLine());
+
+// int mul = 1;
+
+// for (int i = 1; i <= B; i++)
+// {
+//     mul = mul * A;
+// }
+
+// Console.WriteLine($"Результат возведения числа {A} в степень {B} равен {mul}");
+
+
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
 
+// Console.Write("Введите целое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int x = num;
+// int sum = 0;
+
+// while (x > 0)
+// {
+//     sum = sum + x % 10;
+//     x = x/10;
+// }
+
+// Console.WriteLine($"Сумма цифр числа {num} равна {sum}");
+
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
+
+
+int [] GetArray (int size)
+{
+
+int [] array = new int [size];
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = new Random(). Next (0, 100);
+}
+return array;
+}
+
+Console.Write("Введите кол-во элементов в массиве: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int[] resultArray = GetArray(size);
+Console.WriteLine($"результат: [ {String.Join("; ", resultArray)} ]");
+
+// ????? вопрос по моему решению: я могу описать в методе переменную как "size" и потом в теле программы использовать опять описатель переменной size или лучше так не делать?????
